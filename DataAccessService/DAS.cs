@@ -17,6 +17,8 @@ namespace DataAccessService
                 this._context = context;
         }
 
+
+        // Methodes underhere are Methodes for the Operator model.
         public async Task<List<Operator>?> GetOperators()
         {
             if(_context?.Operator == null) 
@@ -24,5 +26,52 @@ namespace DataAccessService
 
             return await _context.Operator.ToListAsync();
         }
+
+        public async Task<Operator?> GetSpecificOperator(int? id)
+        {
+            if (_context?.Operator == null)
+                return null;
+
+            var @operator = await _context.Operator.FirstOrDefaultAsync(m => m.Id == id);
+
+            return @operator;
+        }
+
+        public async Task<Operator?> CreateOperator(Operator @operator)
+        {
+            if (_context?.Operator == null)
+                return null;
+
+            await _context.AddAsync(@operator);
+            await _context.SaveChangesAsync();
+            return @operator;
+        }
+
+        public async Task<Operator?> EditOperator(Operator @operator)
+        {
+            if (_context?.Operator == null)
+                return null;
+
+            _context.Update(@operator);
+            await _context.SaveChangesAsync();
+
+            return @operator;
+        }
+
+        public async Task<bool> DeleteOperator(Operator @operator)
+        {
+            if (_context?.Operator == null)
+                return false;
+
+            _context.Operator.Remove(@operator);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+        // End of Operator Methodes
+
+        //Methodes underhere are Methodes for .. Model
+
+        //End of .. Methodes
     }
 }

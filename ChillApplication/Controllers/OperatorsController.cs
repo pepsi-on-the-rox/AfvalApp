@@ -28,13 +28,8 @@ namespace ChillApplication.Controllers
         // GET: Operators/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Operator == null)
-            {
-                return NotFound();
-            }
+            var @operator = await _context.GetSpecificOperator(id);
 
-            var @operator = await _context.Operator
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (@operator == null)
             {
                 return NotFound();
@@ -58,8 +53,8 @@ namespace ChillApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(@operator);
-                await _context.SaveChangesAsync();
+                if (await _context.CreateOperator(@operator) == null)
+                    return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
             return View(@operator);
@@ -68,16 +63,13 @@ namespace ChillApplication.Controllers
         // GET: Operators/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Operator == null)
-            {
-                return NotFound();
-            }
+            var @operator = await _context.GetSpecificOperator(id);
 
-            var @operator = await _context.Operator.FindAsync(id);
             if (@operator == null)
             {
                 return NotFound();
             }
+
             return View(@operator);
         }
 
@@ -88,29 +80,11 @@ namespace ChillApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName")] Operator @operator)
         {
-            if (id != @operator.Id)
-            {
-                return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(@operator);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!OperatorExists(@operator.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                if (await _context.EditOperator(@operator) == null)
+                    return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
             return View(@operator);
@@ -119,13 +93,8 @@ namespace ChillApplication.Controllers
         // GET: Operators/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Operator == null)
-            {
-                return NotFound();
-            }
+            var @operator = await _context.GetSpecificOperator(id);
 
-            var @operator = await _context.Operator
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (@operator == null)
             {
                 return NotFound();
@@ -139,23 +108,18 @@ namespace ChillApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Operator == null)
-            {
-                return Problem("Entity set 'ChillApplicationContext.Operator'  is null.");
-            }
-            var @operator = await _context.Operator.FindAsync(id);
-            if (@operator != null)
-            {
-                _context.Operator.Remove(@operator);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var @operator = await _context.GetSpecificOperator(id);
 
-        private bool OperatorExists(int id)
-        {
-          return (_context.Operator?.Any(e => e.Id == id)).GetValueOrDefault();
+            if (@operator == null)
+                return NotFound();
+
+            var status = await _context.DeleteOperator(@operator);
+
+            if (status == false)
+            {
+                return BadRequest();
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }
