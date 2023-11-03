@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ChillApplication.Models
+{
+    public class Category
+    {
+        [Required]
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
+        public string Description { get; set; }
+        [Required]
+        public Operator Operator { get; set; 
+
+    }
+}
