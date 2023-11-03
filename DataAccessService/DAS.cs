@@ -172,9 +172,9 @@ namespace DataAccessService
 
             return true;
         }
-        //End of Issue Methodes
+        //End of Category Methodes
 
-        //Methodes underhere are Methodes for Category Model
+        //Methodes underhere are Methodes for ScanObject Model
         public async Task<List<ScanObject>?> GetScanObject()
         {
             if (_context?.ScanObject == null)
@@ -224,6 +224,6 @@ namespace DataAccessService
 
             return true;
         }
-        //End of Issue Methodes
+        //End of ScanObject Methodes
     }
 }
