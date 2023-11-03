@@ -1,9 +1,8 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ChillApplication.Models
 {
-    public class Object
+    public class ScanObject
     {
         [Required]
         [Key]
@@ -20,7 +19,5 @@ namespace ChillApplication.Models
         public float Y2 { get; set; }
         [Required]
         public Category Category { get; set; }
-
-
     }
 }

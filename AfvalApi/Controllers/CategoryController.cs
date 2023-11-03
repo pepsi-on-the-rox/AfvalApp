@@ -1,6 +1,4 @@
-﻿using ChillApplication.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,17 +10,16 @@ namespace AfvalApi.Controllers
     {
         // GET: api/<CategoryController>
         [HttpGet]
-        public IEnumerable<Category> GetCategories()
+        public IEnumerable<string> Get()
         {
-            var Categories = Category.
-            return Category.Categories;
+            return new string[] { "value1", "value2" };
         }
 
         // GET api/<CategoryController>/5
         [HttpGet("{id}")]
-        public Category Get(int id)
+        public string Get(int id)
         {
-            return ;
+            return "value";
         }
 
         // POST api/<CategoryController>
