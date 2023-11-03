@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ChillApplication.Models
+namespace Models
 {
     public class ScanObject
     {

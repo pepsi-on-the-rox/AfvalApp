@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChillApplication\ChillApplication.csproj" />
+    <ProjectReference Include="..\DataAccessService\DataAccessService.csproj" />
   </ItemGroup>
 
 </Project>

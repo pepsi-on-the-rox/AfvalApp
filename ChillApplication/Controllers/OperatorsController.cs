@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ChillApplication.Data;
-using ChillApplication.Models;
-
+using DataAccessService;
+using Models;
+using DataAccessService;
 namespace ChillApplication.Controllers
 {
     public class OperatorsController : Controller
     {
-        private readonly ChillApplicationContext _context;
+        private readonly DAS _context;
 
-        public OperatorsController(ChillApplicationContext context)
+        public OperatorsController(DAS context)
         {
             _context = context;
         }
@@ -22,9 +22,7 @@ namespace ChillApplication.Controllers
         // GET: Operators
         public async Task<IActionResult> Index()
         {
-              return _context.Operator != null ? 
-                          View(await _context.Operator.ToListAsync()) :
-                          Problem("Entity set 'ChillApplicationContext.Operator'  is null.");
+            return View(await _context.GetOperators());
         }
 
         // GET: Operators/Details/5

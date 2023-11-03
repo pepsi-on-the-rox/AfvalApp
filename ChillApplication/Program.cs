@@ -1,13 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using ChillApplication.Data;
+using DataContext;
+using DataAccessService;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ChillApplicationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ChillApplicationContext") ?? throw new InvalidOperationException("Connection string 'ChillApplicationContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<DAS>();
 
 
 var app = builder.Build();

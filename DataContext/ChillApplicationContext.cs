@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ChillApplication.Models;
+using Models;
 
-namespace ChillApplication.Data
+namespace DataContext
 {
     public class ChillApplicationContext : DbContext
     {

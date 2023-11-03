@@ -1,4 +1,4 @@
-﻿namespace ChillApplication.Models
+﻿namespace Models
 {
     public class Issue
     {
