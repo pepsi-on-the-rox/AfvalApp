@@ -11,8 +11,6 @@ namespace ChillApplication.Models
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
-        [Required]
-        public Operator Operator { get; set; 
 
     }
 }

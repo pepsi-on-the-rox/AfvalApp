@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AfvalApi", "AfvalApi\AfvalApi.csproj", "{FE5578F6-B34F-4432-8753-AEAA380659D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChillApplication", "ChillApplication\ChillApplication.csproj", "{0F3E044B-3078-4943-8AFE-EFD79D33F591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChillApplication", "ChillApplication\ChillApplication.csproj", "{0F3E044B-3078-4943-8AFE-EFD79D33F591}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{670A8C36-1459-4893-9722-A1B6534D44C2}"
 EndProject
