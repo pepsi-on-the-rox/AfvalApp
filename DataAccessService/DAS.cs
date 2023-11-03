@@ -70,8 +70,160 @@ namespace DataAccessService
         }
         // End of Operator Methodes
 
-        //Methodes underhere are Methodes for .. Model
+        //Methodes underhere are Methodes for Issue Model
+        public async Task<List<Issue>?> GetIssue()
+        {
+            if (_context?.Issue == null)
+                return null;
 
-        //End of .. Methodes
+            return await _context.Issue.ToListAsync();
+        }
+
+        public async Task<Issue?> GetSpecificIssue(int? id)
+        {
+            if (_context?.Issue == null)
+                return null;
+
+            var @issue = await _context.Issue.FirstOrDefaultAsync(m => m.Id == id);
+
+            return @issue;
+        }
+
+        public async Task<Issue?> CreateIssue(Issue @issue)
+        {
+            if (_context?.Issue == null)
+                return null;
+
+            await _context.AddAsync(@issue);
+            await _context.SaveChangesAsync();
+            return @issue;
+        }
+
+        public async Task<Issue?> EditIssue(Issue @issue)
+        {
+            if (_context?.Issue == null)
+                return null;
+
+            _context.Update(@issue);
+            await _context.SaveChangesAsync();
+
+            return @issue;
+        }
+
+        public async Task<bool> DeleteIssue(Issue @issue)
+        {
+            if (_context?.Issue == null)
+                return false;
+
+            _context.Issue.Remove(@issue);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+        //End of Issue Methodes
+
+        //Methodes underhere are Methodes for Category Model
+        public async Task<List<Category>?> GetCategory()
+        {
+            if (_context?.Category == null)
+                return null;
+
+            return await _context.Category.ToListAsync();
+        }
+
+        public async Task<Category?> GetSpecificCategory(int? id)
+        {
+            if (_context?.Category == null)
+                return null;
+
+            var @category = await _context.Category.FirstOrDefaultAsync(m => m.Id == id);
+
+            return @category;
+        }
+
+        public async Task<Category?> CreateCategory(Category @category)
+        {
+            if (_context?.Category == null)
+                return null;
+
+            await _context.AddAsync(@category);
+            await _context.SaveChangesAsync();
+            return @category;
+        }
+
+        public async Task<Category?> EditCategory(Category @category)
+        {
+            if (_context?.Category == null)
+                return null;
+
+            _context.Update(@category);
+            await _context.SaveChangesAsync();
+
+            return @category;
+        }
+
+        public async Task<bool> DeleteCategory(Category @category)
+        {
+            if (_context?.Category == null)
+                return false;
+
+            _context.Category.Remove(@category);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+        //End of Issue Methodes
+
+        //Methodes underhere are Methodes for Category Model
+        public async Task<List<ScanObject>?> GetScanObject()
+        {
+            if (_context?.ScanObject == null)
+                return null;
+
+            return await _context.ScanObject.ToListAsync();
+        }
+
+        public async Task<ScanObject?> GetSpecificScanObject(int? id)
+        {
+            if (_context?.ScanObject == null)
+                return null;
+
+            var @scanobject = await _context.ScanObject.FirstOrDefaultAsync(m => m.Id == id);
+
+            return @scanobject;
+        }
+
+        public async Task<ScanObject?> CreateScanObject(ScanObject @scanobject)
+        {
+            if (_context?.ScanObject == null)
+                return null;
+
+            await _context.AddAsync(@scanobject);
+            await _context.SaveChangesAsync();
+            return @scanobject;
+        }
+
+        public async Task<ScanObject?> EditScanObject(ScanObject @scanobject)
+        {
+            if (_context?.ScanObject == null)
+                return null;
+
+            _context.Update(@scanobject);
+            await _context.SaveChangesAsync();
+
+            return @scanobject;
+        }
+
+        public async Task<bool> DeleteScanObject(ScanObject @scanobject)
+        {
+            if (_context?.ScanObject == null)
+                return false;
+
+            _context.ScanObject.Remove(@scanobject);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+        //End of Issue Methodes
     }
 }

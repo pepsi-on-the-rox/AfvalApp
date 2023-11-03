@@ -5,114 +5,115 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DataAccessService;
+using DataContext;
 using Models;
+using DataAccessService;
+
 namespace ChillApplication.Controllers
 {
-    public class OperatorsController : Controller
+    public class CategoriesController : Controller
     {
         private readonly DAS _context;
 
-        public OperatorsController(DAS context)
+        public CategoriesController(DAS context)
         {
             _context = context;
         }
 
-        // GET: Operators
+        // GET: Categories
         public async Task<IActionResult> Index()
         {
-            return View(await _context.GetOperators());
+            return View(await _context.GetCategory());
         }
 
-        // GET: Operators/Details/5
+        // GET: Categories/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @category = await _context.GetSpecificCategory(id);
 
-            if (@operator == null)
+            if (@category == null)
             {
                 return NotFound();
             }
 
-            return View(@operator);
+            return View(@category);
         }
 
-        // GET: Operators/Create
+        // GET: Categories/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Operators/Create
+        // POST: Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName")] Operator @operator)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description")] Category @category)
         {
             if (ModelState.IsValid)
             {
-                if (await _context.CreateOperator(@operator) == null)
+                if (await _context.CreateCategory(@category) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
-            return View(@operator);
+            return View(@category);
         }
 
-        // GET: Operators/Edit/5
+        // GET: Categories/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @category = await _context.GetSpecificCategory(id);
 
-            if (@operator == null)
+            if (@category == null)
             {
                 return NotFound();
             }
 
-            return View(@operator);
+            return View(@category);
         }
 
-        // POST: Operators/Edit/5
+        // POST: Categories/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName")] Operator @operator)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description")] Category @category)
         {
-
             if (ModelState.IsValid)
             {
-                if (await _context.EditOperator(@operator) == null)
+                if (await _context.EditCategory(@category) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
-            return View(@operator);
+            return View(@category);
         }
 
-        // GET: Operators/Delete/5
+        // GET: Categories/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @category = await _context.GetSpecificCategory(id);
 
-            if (@operator == null)
+            if (@category == null)
             {
                 return NotFound();
             }
 
-            return View(@operator);
+            return View(@category);
         }
 
-        // POST: Operators/Delete/5
+        // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @category = await _context.GetSpecificCategory(id);
 
-            if (@operator == null)
+            if (@category == null)
                 return NotFound();
-
-            var status = await _context.DeleteOperator(@operator);
+                
+            var status = await _context.DeleteCategory(@category);
 
             if (status == false)
             {

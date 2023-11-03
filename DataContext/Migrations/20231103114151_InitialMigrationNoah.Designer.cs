@@ -4,25 +4,28 @@ using DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace ChillApplication.Migrations
+namespace DataContext.Migrations
 {
     [DbContext(typeof(ChillApplicationContext))]
-    partial class ChillApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20231103114151_InitialMigrationNoah")]
+    partial class InitialMigrationNoah
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.12")
+                .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ChillApplication.Models.Category", b =>
+            modelBuilder.Entity("Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -43,7 +46,7 @@ namespace ChillApplication.Migrations
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("ChillApplication.Models.Issue", b =>
+            modelBuilder.Entity("Models.Issue", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,7 +77,7 @@ namespace ChillApplication.Migrations
                     b.ToTable("Issue");
                 });
 
-            modelBuilder.Entity("ChillApplication.Models.Operator", b =>
+            modelBuilder.Entity("Models.Operator", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,7 +98,7 @@ namespace ChillApplication.Migrations
                     b.ToTable("Operator");
                 });
 
-            modelBuilder.Entity("ChillApplication.Models.ScanObject", b =>
+            modelBuilder.Entity("Models.ScanObject", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -130,9 +133,9 @@ namespace ChillApplication.Migrations
                     b.ToTable("ScanObject");
                 });
 
-            modelBuilder.Entity("ChillApplication.Models.Issue", b =>
+            modelBuilder.Entity("Models.Issue", b =>
                 {
-                    b.HasOne("ChillApplication.Models.Operator", "Operator")
+                    b.HasOne("Models.Operator", "Operator")
                         .WithMany()
                         .HasForeignKey("OperatorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -141,15 +144,15 @@ namespace ChillApplication.Migrations
                     b.Navigation("Operator");
                 });
 
-            modelBuilder.Entity("ChillApplication.Models.ScanObject", b =>
+            modelBuilder.Entity("Models.ScanObject", b =>
                 {
-                    b.HasOne("ChillApplication.Models.Category", "Category")
+                    b.HasOne("Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ChillApplication.Models.Issue", "Issue")
+                    b.HasOne("Models.Issue", "Issue")
                         .WithMany()
                         .HasForeignKey("IssueId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -5,114 +5,115 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DataAccessService;
+using DataContext;
 using Models;
+using DataAccessService;
+
 namespace ChillApplication.Controllers
 {
-    public class OperatorsController : Controller
+    public class ScanObjectsController : Controller
     {
         private readonly DAS _context;
 
-        public OperatorsController(DAS context)
+        public ScanObjectsController(DAS context)
         {
             _context = context;
         }
 
-        // GET: Operators
+        // GET: ScanObjects
         public async Task<IActionResult> Index()
         {
-            return View(await _context.GetOperators());
+              return View(await _context.GetScanObject());
         }
 
-        // GET: Operators/Details/5
+        // GET: ScanObjects/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @scanobject = await _context.GetSpecificScanObject(id);
 
-            if (@operator == null)
+            if (@scanobject == null)
             {
                 return NotFound();
             }
 
-            return View(@operator);
+            return View(@scanobject);
         }
 
-        // GET: Operators/Create
+        // GET: ScanObjects/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Operators/Create
+        // POST: ScanObjects/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName")] Operator @operator)
+        public async Task<IActionResult> Create([Bind("Id,X1,Y1,X2,Y2")] ScanObject @scanobject)
         {
             if (ModelState.IsValid)
             {
-                if (await _context.CreateOperator(@operator) == null)
+                if (await _context.CreateScanObject(@scanobject) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
-            return View(@operator);
+            return View(@scanobject);
         }
 
-        // GET: Operators/Edit/5
+        // GET: ScanObjects/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @scanobject = await _context.GetSpecificScanObject(id);
 
-            if (@operator == null)
+            if (@scanobject == null)
             {
                 return NotFound();
             }
 
-            return View(@operator);
+            return View(@scanobject);
         }
 
-        // POST: Operators/Edit/5
+        // POST: ScanObjects/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName")] Operator @operator)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,X1,Y1,X2,Y2")] ScanObject @scanobject)
         {
-
             if (ModelState.IsValid)
             {
-                if (await _context.EditOperator(@operator) == null)
+                if (await _context.EditScanObject(@scanobject) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
-            return View(@operator);
+            return View(@scanobject);
         }
 
-        // GET: Operators/Delete/5
+        // GET: ScanObjects/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @scanobject = await _context.GetSpecificScanObject(id);
 
-            if (@operator == null)
+            if (@scanobject == null)
             {
                 return NotFound();
             }
 
-            return View(@operator);
+            return View(@scanobject);
         }
 
-        // POST: Operators/Delete/5
+        // POST: ScanObjects/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var @operator = await _context.GetSpecificOperator(id);
+            var @scanobject = await _context.GetSpecificScanObject(id);
 
-            if (@operator == null)
+            if (@scanobject == null)
                 return NotFound();
 
-            var status = await _context.DeleteOperator(@operator);
+            var status = await _context.DeleteScanObject(@scanobject);
 
             if (status == false)
             {
