@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\MVC\\MVC\\MVC.csproj",
-      "projectName": "MVC",
-      "projectPath": "C:\\Users\\noahl\\source\\repos\\MVC\\MVC\\MVC.csproj",
+      "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\ChillApplication.csproj",
+      "projectName": "ChillApplication",
+      "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\ChillApplication.csproj",
       "packagesPath": "C:\\Users\\noahl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\noahl\\source\\repos\\MVC\\MVC\\obj\\",
+      "outputPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\noahl\\AppData\\Roaming\\NuGet\\NuGet.Config",

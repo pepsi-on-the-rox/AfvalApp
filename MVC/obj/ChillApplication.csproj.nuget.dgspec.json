@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\MVC.csproj": {}
+    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\ChillApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\MVC.csproj": {
+    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\ChillApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\MVC.csproj",
-        "projectName": "MVC",
-        "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\MVC.csproj",
+        "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\ChillApplication.csproj",
+        "projectName": "ChillApplication",
+        "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\ChillApplication.csproj",
         "packagesPath": "C:\\Users\\noahl\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\MVC\\obj\\",
         "projectStyle": "PackageReference",
