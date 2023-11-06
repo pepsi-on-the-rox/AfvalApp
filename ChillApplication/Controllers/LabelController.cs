@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DataContext;
+using DataAccessService;
 using Models;
 
 namespace ChillApplication.Controllers
 {
     public class LabelController : Controller
     {
-        private readonly ChillApplicationContext _context;
+        private readonly DAS _context;
 
-        public LabelController(ChillApplicationContext context)
+        public LabelController(DAS context)
         {
             _context = context;
         }
@@ -22,21 +22,14 @@ namespace ChillApplication.Controllers
         // GET: Label
         public async Task<IActionResult> Index()
         {
-              return _context.Label != null ? 
-                          View(await _context.Label.ToListAsync()) :
-                          Problem("Entity set 'ChillApplicationContext.Label'  is null.");
+            return View(await _context.GetLabel());
         }
 
         // GET: Label/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Label == null)
-            {
-                return NotFound();
-            }
+            var label = await _context.GetSpecificLabel(id);
 
-            var label = await _context.Label
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (label == null)
             {
                 return NotFound();
@@ -60,8 +53,8 @@ namespace ChillApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(label);
-                await _context.SaveChangesAsync();
+                if (await _context.CreateLabel(label) == null)
+                    return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
             return View(label);
@@ -70,16 +63,13 @@ namespace ChillApplication.Controllers
         // GET: Label/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Label == null)
-            {
-                return NotFound();
-            }
+            var label = await _context.GetSpecificLabel(id);
 
-            var label = await _context.Label.FindAsync(id);
             if (label == null)
             {
                 return NotFound();
             }
+
             return View(label);
         }
 
@@ -90,29 +80,10 @@ namespace ChillApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Label label)
         {
-            if (id != label.Id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(label);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!LabelExists(label.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                if (await _context.EditLabel(label) == null)
+                    return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
             return View(label);
@@ -121,13 +92,8 @@ namespace ChillApplication.Controllers
         // GET: Label/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Label == null)
-            {
-                return NotFound();
-            }
+            var label = await _context.GetSpecificLabel(id);
 
-            var label = await _context.Label
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (label == null)
             {
                 return NotFound();
@@ -141,23 +107,13 @@ namespace ChillApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Label == null)
-            {
-                return Problem("Entity set 'ChillApplicationContext.Label'  is null.");
-            }
-            var label = await _context.Label.FindAsync(id);
-            if (label != null)
-            {
-                _context.Label.Remove(label);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var label = await _context.GetSpecificLabel(id);
 
-        private bool LabelExists(int id)
-        {
-          return (_context.Label?.Any(e => e.Id == id)).GetValueOrDefault();
+            if (label == null)
+                return NotFound();
+
+            await _context.DeleteLabel(label);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
