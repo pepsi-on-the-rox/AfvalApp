@@ -26,6 +26,6 @@ namespace DataContext
 
         public DbSet<Operator> Operator { get; set; }
         public DbSet<Issue> Issue { get; set; }
-        public DbSet<Label> Category { get; set; }
+        public DbSet<Label> Label { get; set; }
     }
 }

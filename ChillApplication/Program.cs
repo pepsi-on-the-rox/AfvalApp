@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using DataContext;
-using DataAccesService;
+using DataAccessService;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ChillApplicationContext>(options =>
