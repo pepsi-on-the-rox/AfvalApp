@@ -113,12 +113,7 @@ namespace ChillApplication.Controllers
             if (@operator == null)
                 return NotFound();
 
-            var status = await _context.DeleteOperator(@operator);
-
-            if (status == false)
-            {
-                return BadRequest();
-            }
+            await _context.DeleteOperator(@operator);
             return RedirectToAction(nameof(Index));
         }
     }
