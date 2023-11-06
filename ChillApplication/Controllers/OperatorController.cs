@@ -7,14 +7,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DataContext;
 using Models;
+using DataAccessService;
 
 namespace ChillApplication.Controllers
 {
     public class OperatorController : Controller
     {
-        private readonly ChillApplicationContext _context;
+        private readonly DAS _context;
 
-        public OperatorController(ChillApplicationContext context)
+        public OperatorController(DAS context)
         {
             _context = context;
         }
@@ -22,21 +23,14 @@ namespace ChillApplication.Controllers
         // GET: Operator
         public async Task<IActionResult> Index()
         {
-              return _context.Operator != null ? 
-                          View(await _context.Operator.ToListAsync()) :
-                          Problem("Entity set 'ChillApplicationContext.Operator'  is null.");
+            return View(await _context.GetOperators());
         }
 
         // GET: Operator/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Operator == null)
-            {
-                return NotFound();
-            }
+            var @operator = await _context.GetSpecificOperator(id);
 
-            var @operator = await _context.Operator
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (@operator == null)
             {
                 return NotFound();
@@ -60,8 +54,8 @@ namespace ChillApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(@operator);
-                await _context.SaveChangesAsync();
+                if (await _context.CreateOperator(@operator) == null)
+                    return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
             return View(@operator);
@@ -70,16 +64,13 @@ namespace ChillApplication.Controllers
         // GET: Operator/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Operator == null)
-            {
-                return NotFound();
-            }
+            var @operator = await _context.GetSpecificOperator(id);
 
-            var @operator = await _context.Operator.FindAsync(id);
             if (@operator == null)
             {
                 return NotFound();
             }
+
             return View(@operator);
         }
 
@@ -90,29 +81,10 @@ namespace ChillApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Firstname,Lastname")] Operator @operator)
         {
-            if (id != @operator.Id)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(@operator);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!OperatorExists(@operator.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                if (await _context.EditOperator(@operator) == null)
+                    return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
             return View(@operator);
@@ -121,13 +93,8 @@ namespace ChillApplication.Controllers
         // GET: Operator/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Operator == null)
-            {
-                return NotFound();
-            }
+            var @operator = await _context.GetSpecificOperator(id);
 
-            var @operator = await _context.Operator
-                .FirstOrDefaultAsync(m => m.Id == id);
             if (@operator == null)
             {
                 return NotFound();
@@ -141,23 +108,18 @@ namespace ChillApplication.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Operator == null)
-            {
-                return Problem("Entity set 'ChillApplicationContext.Operator'  is null.");
-            }
-            var @operator = await _context.Operator.FindAsync(id);
-            if (@operator != null)
-            {
-                _context.Operator.Remove(@operator);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var @operator = await _context.GetSpecificOperator(id);
 
-        private bool OperatorExists(int id)
-        {
-          return (_context.Operator?.Any(e => e.Id == id)).GetValueOrDefault();
+            if (@operator == null)
+                return NotFound();
+
+            var status = await _context.DeleteOperator(@operator);
+
+            if (status == false)
+            {
+                return BadRequest();
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }
