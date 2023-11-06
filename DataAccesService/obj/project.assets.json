@@ -1053,6 +1053,35 @@
             "rid": "win"
           }
         }
+      },
+      "DataContext/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataContext.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataContext.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
       }
     }
   },
@@ -2875,10 +2904,21 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "DataContext/1.0.0": {
+      "type": "project",
+      "path": "../DataContext/DataContext.csproj",
+      "msbuildProject": "../DataContext/DataContext.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DataContext >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
@@ -2911,7 +2951,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj": {
+              "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

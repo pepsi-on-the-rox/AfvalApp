@@ -1159,6 +1159,50 @@
             "rid": "win"
           }
         }
+      },
+      "DataAccesService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DataContext": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/DataAccesService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccesService.dll": {}
+        }
+      },
+      "DataContext/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataContext.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataContext.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
       }
     }
   },
@@ -3331,15 +3375,32 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "DataAccesService/1.0.0": {
+      "type": "project",
+      "path": "../DataAccesService/DataAccesService.csproj",
+      "msbuildProject": "../DataAccesService/DataAccesService.csproj"
+    },
+    "DataContext/1.0.0": {
+      "type": "project",
+      "path": "../DataContext/DataContext.csproj",
+      "msbuildProject": "../DataContext/DataContext.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DataAccesService >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.10",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
+      "Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3369,7 +3430,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj": {
+              "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj"
+            },
+            "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
