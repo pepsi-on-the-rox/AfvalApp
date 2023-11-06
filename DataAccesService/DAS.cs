@@ -122,8 +122,8 @@ namespace DataAccessService
         }
         //End of Issue Methodes
 
-        //Methodes underhere are Methodes for Category Model
-        public async Task<List<Label>?> GetCategory()
+        //Methodes underhere are Methodes for Label Model
+        public async Task<List<Label>?> GetLabel()
         {
             if (_context?.Label == null)
                 return null;
@@ -131,7 +131,7 @@ namespace DataAccessService
             return await _context.Label.ToListAsync();
         }
 
-        public async Task<Label?> GetSpecificCategory(int? id)
+        public async Task<Label?> GetSpecificLabel(int? id)
         {
             if (_context?.Label == null)
                 return null;
@@ -141,7 +141,7 @@ namespace DataAccessService
             return @label;
         }
 
-        public async Task<Label?> CreateCategory(Label @label)
+        public async Task<Label?> CreateLabel(Label @label)
         {
             if (_context?.Label == null)
                 return null;
@@ -151,7 +151,7 @@ namespace DataAccessService
             return @label;
         }
 
-        public async Task<Label?> EditCategory(Label @label)
+        public async Task<Label?> EditLabel(Label @label)
         {
             if (_context?.Label == null)
                 return null;
@@ -162,7 +162,7 @@ namespace DataAccessService
             return @label;
         }
 
-        public async Task<bool> DeleteCategory(Label @label)
+        public async Task<bool> DeleteLabel(Label @label)
         {
             if (_context?.Label == null)
                 return false;
@@ -172,6 +172,6 @@ namespace DataAccessService
 
             return true;
         }
-        //End of Category Methodes
+        //End of Label Methodes
     }
 }
