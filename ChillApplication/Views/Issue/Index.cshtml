@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Operator)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.PicturePath)
             </th>
             <th>
@@ -42,6 +45,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Operator.Firstname)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PicturePath)
             </td>

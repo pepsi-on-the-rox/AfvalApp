@@ -39,9 +39,11 @@ namespace ChillApplication.Controllers
         }
 
         // GET: Issue/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var viewModel = new ModelViewIssue();
+            viewModel.Operators = await _context.GetOperators();
+            return View(viewModel);
         }
 
         // POST: Issue/Create
@@ -49,28 +51,30 @@ namespace ChillApplication.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PicturePath,State,Createdate,Resolveddate,X1,X2,Y1,Y2")] Issue issue)
+        public async Task<IActionResult> Create(ModelViewIssue viewModel)
         {
             if (ModelState.IsValid)
             {
-                if (await _context.CreateIssue(issue) == null)
+                viewModel.Issue.Operator = await _context.GetSpecificOperator(viewModel.SelectedOperatorId);
+                if (await _context.CreateIssue(viewModel.Issue) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
-            return View(issue);
+            return View(viewModel);
         }
 
         // GET: Issue/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            var issue = await _context.GetSpecificIssue(id);
-
-            if (issue == null)
+            var modelView = new ModelViewIssue();
+            modelView.Issue = await _context.GetSpecificIssue(id);
+            modelView.Operators = await _context.GetOperators();
+            if (modelView.Issue == null)
             {
                 return NotFound();
             }
 
-            return View(issue);
+            return View(modelView);
         }
 
         // POST: Issue/Edit/5
@@ -78,15 +82,15 @@ namespace ChillApplication.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,PicturePath,State,Createdate,Resolveddate,X1,X2,Y1,Y2")] Issue issue)
+        public async Task<IActionResult> Edit(ModelViewIssue modelView)
         {
             if (ModelState.IsValid)
             {
-                if (await _context.EditIssue(issue) == null)
+                if (await _context.EditIssue(modelView.Issue) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
             }
-            return View(issue);
+            return View(modelView);
         }
 
         // GET: Issue/Delete/5
