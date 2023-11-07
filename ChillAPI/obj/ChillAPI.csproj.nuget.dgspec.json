@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\ChillAPI\\ChillAPI.csproj": {}
+    "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillAPI\\ChillAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\ChillAPI\\ChillAPI.csproj": {
+    "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillAPI\\ChillAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\ChillAPI\\ChillAPI.csproj",
+        "projectUniqueName": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillAPI\\ChillAPI.csproj",
         "projectName": "ChillAPI",
-        "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\ChillAPI\\ChillAPI.csproj",
-        "packagesPath": "C:\\Users\\noahl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\ChillAPI\\obj\\",
+        "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillAPI\\ChillAPI.csproj",
+        "packagesPath": "C:\\Users\\nilsv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\noahl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nilsv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj": {
-                "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj"
+              "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataAccesService\\DataAccesService.csproj": {
+                "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataAccesService\\DataAccesService.csproj"
               },
-              "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj"
+              "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj"
               }
             }
           }
@@ -95,21 +100,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj": {
+    "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataAccesService\\DataAccesService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj",
+        "projectUniqueName": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataAccesService\\DataAccesService.csproj",
         "projectName": "DataAccesService",
-        "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\DataAccesService.csproj",
-        "packagesPath": "C:\\Users\\noahl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataAccesService\\obj\\",
+        "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataAccesService\\DataAccesService.csproj",
+        "packagesPath": "C:\\Users\\nilsv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataAccesService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\noahl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nilsv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,14 +126,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj": {
-                "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj"
+              "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataContext\\DataContext.csproj": {
+                "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataContext\\DataContext.csproj"
               }
             }
           }
@@ -176,21 +186,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj": {
+    "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataContext\\DataContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj",
+        "projectUniqueName": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataContext\\DataContext.csproj",
         "projectName": "DataContext",
-        "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\DataContext.csproj",
-        "packagesPath": "C:\\Users\\noahl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\DataContext\\obj\\",
+        "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataContext\\DataContext.csproj",
+        "packagesPath": "C:\\Users\\nilsv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\DataContext\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\noahl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nilsv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -198,14 +212,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj"
+              "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj"
               }
             }
           }
@@ -257,21 +272,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj": {
+    "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\noahl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\noahl\\source\\repos\\AfvalApp\\Models\\obj\\",
+        "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\nilsv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\noahl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nilsv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -279,6 +298,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -334,7 +354,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
