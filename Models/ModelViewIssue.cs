@@ -10,7 +10,10 @@ namespace Models
     {
         public int? SelectedOperatorId { get; set; }
         public List<Operator>? Operators { get; set; }
+        public List<Label>? Labels { get; set; }
+
         public Issue? Issue { get; set; }
+
 
     }
 }

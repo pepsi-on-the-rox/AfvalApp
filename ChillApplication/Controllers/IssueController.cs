@@ -69,6 +69,7 @@ namespace ChillApplication.Controllers
             var modelView = new ModelViewIssue();
             modelView.Issue = await _context.GetSpecificIssue(id);
             modelView.Operators = await _context.GetOperators();
+            modelView.Labels = await _context.GetLabel();
             if (modelView.Issue == null)
             {
                 return NotFound();

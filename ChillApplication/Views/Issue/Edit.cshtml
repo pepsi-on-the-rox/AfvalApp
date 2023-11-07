@@ -22,6 +22,15 @@
                     }
                 </select>
             </div>
+            @* <div class="form-group">
+                <label asp-for="SelectedOperatorId" class="control-label">Operator</label>
+                <select asp-for="SelectedOperatorId" class="form-control" id="customerDropdown" data-val="true" data-val-required="Selecteer een Operator.">
+                    @foreach (var user in Model.Operators)
+                    {
+                        <option value="@user.Id">@user.Firstname</option>
+                    }
+                </select>
+            </div> *@
 
             <div class="form-group">
                 <label asp-for="Issue.PicturePath" class="control-label"></label>
