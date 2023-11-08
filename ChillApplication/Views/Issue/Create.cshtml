@@ -13,15 +13,6 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="SelectedOperatorId" class="control-label">Operator</label>
-                <select asp-for="SelectedOperatorId" class="form-control" id="operatorDropdown" data-val="true">
-                    @foreach (var user in Model.Operators)
-                    {
-                        <option value="@user.Id">@user.Firstname</option>
-                    }
-                </select>
-            </div>
-            <div class="form-group">
                 <label asp-for="Issue.PicturePath" class="control-label"></label>
                 <input asp-for="Issue.PicturePath" class="form-control" />
                 <span asp-validation-for="Issue.PicturePath" class="text-danger"></span>
