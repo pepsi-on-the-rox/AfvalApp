@@ -22,15 +22,15 @@
                     }
                 </select>
             </div>
-            @* <div class="form-group">
-                <label asp-for="SelectedOperatorId" class="control-label">Operator</label>
-                <select asp-for="SelectedOperatorId" class="form-control" id="customerDropdown" data-val="true" data-val-required="Selecteer een Operator.">
-                    @foreach (var user in Model.Operators)
+             <div class="form-group">
+                <label asp-for="SelectedLabelId" class="control-label">Label</label>
+                <select asp-for="SelectedLabelId" class="form-control" id="customerDropdown" data-val="true" data-val-required="Selecteer een Label.">
+                    @foreach (var label in Model.Labels)
                     {
-                        <option value="@user.Id">@user.Firstname</option>
+                        <option value="@label.Id">@label.Name</option>
                     }
                 </select>
-            </div> *@
+            </div> 
 
             <div class="form-group">
                 <label asp-for="Issue.PicturePath" class="control-label"></label>
