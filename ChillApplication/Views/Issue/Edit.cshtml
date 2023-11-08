@@ -7,6 +7,7 @@
 <h1>Edit</h1>
 
 <h4>Issue</h4>
+<h4>Issued on: @Model.Issue.Createdate</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -22,7 +23,7 @@
                     }
                 </select>
             </div>
-             <div class="form-group">
+            <div class="form-group">
                 <label asp-for="SelectedLabelId" class="control-label">Label</label>
                 <select asp-for="SelectedLabelId" class="form-control" id="customerDropdown" data-val="true" data-val-required="Selecteer een Label.">
                     @foreach (var label in Model.Labels)
@@ -30,27 +31,14 @@
                         <option value="@label.Id">@label.Name</option>
                     }
                 </select>
-            </div> 
-
-            <div class="form-group">
-                <label asp-for="Issue.PicturePath" class="control-label"></label>
-                <input asp-for="Issue.PicturePath" class="form-control" />
-                <span asp-validation-for="Issue.PicturePath" class="text-danger"></span>
+            </div>
+            <div>
+                <a class="btn btn-primary" style="margin:2%" asp-area="" asp-controller="Label" asp-action="Create">NieweLabel</a>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="Issue.State" /> @Html.DisplayNameFor(model => model.Issue.State)
                 </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Issue.Createdate" class="control-label"></label>
-                <input asp-for="Issue.Createdate" class="form-control" />
-                <span asp-validation-for="Issue.Createdate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Issue.Resolveddate" class="control-label"></label>
-                <input asp-for="Issue.Resolveddate" class="form-control" />
-                <span asp-validation-for="Issue.Resolveddate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Issue.X1" class="control-label"></label>
@@ -74,6 +62,21 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+            <div class="form-group" style="visibility: hidden">
+                <label asp-for="Issue.Createdate" class="control-label"></label>
+                <input asp-for="Issue.Createdate" class="form-control" />
+                <span asp-validation-for="Issue.Createdate" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="visibility: hidden">
+                <label asp-for="Issue.Resolveddate" class="control-label"></label>
+                <input asp-for="Issue.Resolveddate" class="form-control" />
+                <span asp-validation-for="Issue.Resolveddate" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="visibility: hidden">
+                <label asp-for="Issue.PicturePath" class="control-label"></label>
+                <input asp-for="Issue.PicturePath" class="form-control" />
+                <span asp-validation-for="Issue.PicturePath" class="text-danger"></span>
             </div>
         </form>
     </div>

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DataAccessService;
 using Models;
+using Microsoft.Data.SqlClient;
 
 namespace ChillApplication.Controllers
 {
@@ -22,11 +23,17 @@ namespace ChillApplication.Controllers
         // GET: Issue
         public async Task<IActionResult> Index()
         {
-            return View(await _context.GetIssue());
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.LastName);
+                    break;
+            
         }
+            return View(await _context.GetIssue());
 
-        // GET: Issue/Details/5
-        public async Task<IActionResult> Details(int? id)
+            // GET: Issue/Details/5
+            public async Task<IActionResult> Details(int? id)
         {
             var issue = await _context.GetSpecificIssue(id);
 
@@ -89,6 +96,7 @@ namespace ChillApplication.Controllers
             {
                 modelView.Issue.Operator = await _context.GetSpecificOperator(modelView.SelectedOperatorId);
                 modelView.Issue.Label = await _context.GetSpecificLabel(modelView.SelectedLabelId);
+                modelView.Issue.Resolveddate = DateTime.Now;
                 if (await _context.EditIssue(modelView.Issue) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));

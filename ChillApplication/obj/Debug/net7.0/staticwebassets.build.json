@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bjqgEgm6rF6Fi9z17o5JkWyCkyZ5Q0oERySSiyPrFo4=",
+  "Hash": "lAZ3mZGtwsZWTlTEoLgpCX/rB2RY2Khz055uZOntri8=",
   "Source": "ChillApplication",
   "BasePath": "_content/ChillApplication",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillApplication\\wwwroot\\Images\\Test.png",
-      "SourceId": "ChillApplication",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillApplication\\wwwroot\\",
-      "BasePath": "_content/ChillApplication",
-      "RelativePath": "Images/Test.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Test.png"
     },
     {
       "Identity": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\ChillApplication\\wwwroot\\Images\\trash1_jpg.rf.2aa2315aaf159f59f5872dcc5b64e8ed.jpg",
