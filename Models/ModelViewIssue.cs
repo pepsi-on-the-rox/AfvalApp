@@ -12,6 +12,7 @@ namespace Models
         public int? SelectedLabelId { get; set; }
         public List<Operator>? Operators { get; set; }
         public List<Label>? Labels { get; set; }
+        public List<Issue>? Issues { get; set; }
 
         public Issue? Issue { get; set; }
 

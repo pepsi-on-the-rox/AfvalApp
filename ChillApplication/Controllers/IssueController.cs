@@ -87,6 +87,8 @@ namespace ChillApplication.Controllers
         {
             if (ModelState.IsValid)
             {
+                modelView.Issue.Operator = await _context.GetSpecificOperator(modelView.SelectedOperatorId);
+                modelView.Issue.Label = await _context.GetSpecificLabel(modelView.SelectedLabelId);
                 if (await _context.EditIssue(modelView.Issue) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
