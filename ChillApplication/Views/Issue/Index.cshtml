@@ -19,40 +19,53 @@
                 @Html.DisplayNameFor(model => model.Label)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.State)
+                <div class="link-container">
+                    <a id="statusLink">Status</a>
+                    <a id="statusLinkAsc" class="nav-link text-dark" asp-area="" asp-controller="Issue" asp-action="Index" asp-route-sortOrder="completed">↑</a>
+                    <a id="statusLinkDesc" class="nav-link text-dark" asp-area="" asp-controller="Issue" asp-action="Index" asp-route-sortOrder="not_completed">↓</a>
+                </div>
             </th>
+
+
             <th>
-                @Html.DisplayNameFor(model => model.Createdate)
+                <div class="link-container">
+                    <a id="completedLink" class="nav-link text-dark" asp-area="" asp-controller="Issue" asp-action="Index" asp-route-sortOrder="completed">Completed</a>
+                    <a id="completedLinkAsc" class="nav-link text-dark" asp-area="" asp-controller="Issue" asp-action="Index" asp-route-sortOrder="date_asce">↑</a>
+                    <a id="completedLinkDesc" class="nav-link text-dark" asp-area="" asp-controller="Issue" asp-action="Index" asp-route-sortOrder="date_desc">↓</a>
+                </div>
             </th>
+
+
             <th>
                 @Html.DisplayNameFor(model => model.Resolveddate)
             </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Operator.Firstname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Label.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Createdate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Resolveddate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Operator.Firstname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Label.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Createdate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resolveddate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

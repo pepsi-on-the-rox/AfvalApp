@@ -21,19 +21,39 @@ namespace ChillApplication.Controllers
         }
 
         // GET: Issue
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
+            var issues = new List<Issue>();
+            issues = await _context.GetIssue();
+
             switch (sortOrder)
             {
-                case "name_desc":
-                    students = students.OrderByDescending(s => s.LastName);
+                case "date_asce":
+                    issues = issues.OrderBy(s => s.Createdate).ToList();
                     break;
-            
-        }
-            return View(await _context.GetIssue());
+                case "date_desc":
+                    issues = issues.OrderByDescending(s => s.Createdate).ToList();
+                    break;
+                case "completed":
+                    issues = issues.Where(s => s.State == true).ToList();
+                    break;
 
-            // GET: Issue/Details/5
-            public async Task<IActionResult> Details(int? id)
+                case "not_completed":
+                    issues = issues.Where(s => s.State == false).ToList();
+                    break;
+
+
+                default:
+                    // Handle the default case when sortOrder is not recognized
+                    break;
+            }
+
+            return View(issues);
+        }
+
+
+        // GET: Issue/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
             var issue = await _context.GetSpecificIssue(id);
 
