@@ -1,4 +1,4 @@
-﻿@model Models.Issue
+﻿@model Models.ModelViewIssue
 
 @{
     ViewData["Title"] = "Create";
@@ -13,44 +13,44 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="PicturePath" class="control-label"></label>
-                <input asp-for="PicturePath" class="form-control" />
-                <span asp-validation-for="PicturePath" class="text-danger"></span>
+                <label asp-for="Issue.PicturePath" class="control-label"></label>
+                <input asp-for="Issue.PicturePath" class="form-control" />
+                <span asp-validation-for="Issue.PicturePath" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="State" /> @Html.DisplayNameFor(model => model.State)
+                    <input class="form-check-input" asp-for="Issue.State" /> @Html.DisplayNameFor(model => model.Issue.State)
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="Createdate" class="control-label"></label>
-                <input asp-for="Createdate" class="form-control" />
-                <span asp-validation-for="Createdate" class="text-danger"></span>
+                <label asp-for="Issue.Createdate" class="control-label"></label>
+                <input asp-for="Issue.Createdate" class="form-control" />
+                <span asp-validation-for="Issue.Createdate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Resolveddate" class="control-label"></label>
-                <input asp-for="Resolveddate" class="form-control" />
-                <span asp-validation-for="Resolveddate" class="text-danger"></span>
+                <label asp-for="Issue.Resolveddate" class="control-label"></label>
+                <input asp-for="Issue.Resolveddate" class="form-control" />
+                <span asp-validation-for="Issue.Resolveddate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="X1" class="control-label"></label>
-                <input asp-for="X1" class="form-control" />
-                <span asp-validation-for="X1" class="text-danger"></span>
+                <label asp-for="Issue.X1" class="control-label"></label>
+                <input asp-for="Issue.X1" class="form-control" />
+                <span asp-validation-for="Issue.X1" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="X2" class="control-label"></label>
-                <input asp-for="X2" class="form-control" />
-                <span asp-validation-for="X2" class="text-danger"></span>
+                <label asp-for="Issue.X2" class="control-label"></label>
+                <input asp-for="Issue.X2" class="form-control" />
+                <span asp-validation-for="Issue.X2" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Y1" class="control-label"></label>
-                <input asp-for="Y1" class="form-control" />
-                <span asp-validation-for="Y1" class="text-danger"></span>
+                <label asp-for="Issue.Y1" class="control-label"></label>
+                <input asp-for="Issue.Y1" class="form-control" />
+                <span asp-validation-for="Issue.Y1" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Y2" class="control-label"></label>
-                <input asp-for="Y2" class="form-control" />
-                <span asp-validation-for="Y2" class="text-danger"></span>
+                <label asp-for="Issue.Y2" class="control-label"></label>
+                <input asp-for="Issue.Y2" class="form-control" />
+                <span asp-validation-for="Issue.Y2" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

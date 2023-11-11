@@ -71,13 +71,25 @@ namespace DataAccessService
         // End of Operator Methodes
 
         //Methodes underhere are Methodes for Issue Model
+        //public async Task<List<Issue>?> GetIssue()
+        //{
+        //    if (_context?.Issue == null)
+        //        return null;
+
+        //    return await _context.Issue.ToListAsync();
+        //}
         public async Task<List<Issue>?> GetIssue()
         {
             if (_context?.Issue == null)
                 return null;
 
-            return await _context.Issue.ToListAsync();
+            return await _context.Issue
+                .Include(issue => issue.Operator)
+                .Include(issue => issue.Label)
+                .ToListAsync();
         }
+
+
 
         public async Task<Issue?> GetSpecificIssue(int? id)
         {
