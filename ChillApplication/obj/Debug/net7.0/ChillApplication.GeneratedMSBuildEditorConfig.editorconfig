@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ChillApplication
 build_property.RootNamespace = ChillApplication
-build_property.ProjectDir = C:\Users\nilsv\OneDrive\Desktop\Casus\ChillApplication\
+build_property.ProjectDir = C:\Users\nilsv\Source\Repos\AfvalApp ttwt\ChillApplication\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nilsv\OneDrive\Desktop\Casus\ChillApplication
+build_property.MSBuildProjectDirectory = C:\Users\nilsv\Source\Repos\AfvalApp ttwt\ChillApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Home/Index.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Home/Privacy.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Issue/Create.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Issue/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Issue/Delete.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Issue/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Issue/Details.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Issue/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Issue/Edit.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Issue/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Issue/Index.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Issue/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Label/Create.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Label/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFiZWxcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Label/Delete.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Label/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFiZWxcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Label/Details.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Label/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFiZWxcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Label/Edit.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Label/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFiZWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Label/Index.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Label/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFiZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Operator/Create.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Operator/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0b3JcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Operator/Delete.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Operator/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0b3JcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Operator/Details.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Operator/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0b3JcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Operator/Edit.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Operator/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0b3JcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Operator/Index.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Operator/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Shared/Error.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/_ViewImports.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/_ViewStart.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nilsv/OneDrive/Desktop/Casus/ChillApplication/Views/Shared/_Layout.cshtml]
+[C:/Users/nilsv/Source/Repos/AfvalApp ttwt/ChillApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9hpb59gptk

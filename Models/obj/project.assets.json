@@ -2892,11 +2892,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\nilsv\\Source\\Repos\\AfvalApp ttwt\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\Models.csproj",
+      "projectPath": "C:\\Users\\nilsv\\Source\\Repos\\AfvalApp ttwt\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\nilsv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nilsv\\OneDrive\\Desktop\\Casus\\Models\\obj\\",
+      "outputPath": "C:\\Users\\nilsv\\Source\\Repos\\AfvalApp ttwt\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
