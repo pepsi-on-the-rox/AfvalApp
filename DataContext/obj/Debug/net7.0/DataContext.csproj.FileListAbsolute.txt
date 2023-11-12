@@ -15,3 +15,20 @@ C:\Users\noahl\source\repos\AfvalApp\DataContext\obj\Debug\net7.0\refint\DataCon
 C:\Users\noahl\source\repos\AfvalApp\DataContext\obj\Debug\net7.0\DataContext.pdb
 C:\Users\noahl\source\repos\AfvalApp\DataContext\obj\Debug\net7.0\DataContext.genruntimeconfig.cache
 C:\Users\noahl\source\repos\AfvalApp\DataContext\obj\Debug\net7.0\ref\DataContext.dll
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\bin\Debug\net7.0\DataContext.deps.json
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\bin\Debug\net7.0\DataContext.runtimeconfig.json
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\bin\Debug\net7.0\DataContext.dll
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\bin\Debug\net7.0\DataContext.pdb
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\bin\Debug\net7.0\Models.dll
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\bin\Debug\net7.0\Models.pdb
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.csproj.AssemblyReference.cache
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.AssemblyInfoInputs.cache
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.AssemblyInfo.cs
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.csproj.CoreCompileInputs.cache
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.csproj.CopyComplete
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.dll
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\refint\DataContext.dll
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.pdb
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\DataContext.genruntimeconfig.cache
+C:\Users\nilsv\Source\Repos\AfvalApp ttwt\DataContext\obj\Debug\net7.0\ref\DataContext.dll
