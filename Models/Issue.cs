@@ -13,11 +13,22 @@ namespace Models
         public bool State { get; set; } = false;
         public DateTime Createdate {  get; set; } = DateTime.Now;
         public DateTime? Resolveddate { get; set; }
-        public int? X1 { get; set; }
-        public int? X2 { get; set; }
-        public int? Y1 { get; set; }
-        public int? Y2 { get; set; }
+        public float? X1 { get; set; }
+        public float? X2 { get; set; }
+        public float? Y1 { get; set; }
+        public float? Y2 { get; set; }
         public Label? Label { get; set; }
         public Operator? Operator { get; set; }
+        
+
+        public float? normalize(float? cord)
+        {
+            return cord / 2345;
+        } 
+
+        public float? denormalize(float? cord)
+        {
+            return (cord * 2345);
+        }
     }
 }

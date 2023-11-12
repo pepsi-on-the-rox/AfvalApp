@@ -97,6 +97,10 @@ namespace ChillApplication.Controllers
             modelView.Issue = await _context.GetSpecificIssue(id);
             modelView.Operators = await _context.GetOperators();
             modelView.Labels = await _context.GetLabel();
+            modelView.Issue.X1 = modelView.Issue.denormalize(modelView.Issue.X1);
+            modelView.Issue.Y1 = modelView.Issue.denormalize(modelView.Issue.Y1);
+            modelView.Issue.X2 = modelView.Issue.denormalize(modelView.Issue.X2);
+            modelView.Issue.Y2 = modelView.Issue.denormalize(modelView.Issue.Y2);
             if (modelView.Issue == null)
             {
                 return NotFound();
@@ -117,6 +121,10 @@ namespace ChillApplication.Controllers
                 modelView.Issue.Operator = await _context.GetSpecificOperator(modelView.SelectedOperatorId);
                 modelView.Issue.Label = await _context.GetSpecificLabel(modelView.SelectedLabelId);
                 modelView.Issue.Resolveddate = DateTime.Now;
+                modelView.Issue.X1 = modelView.Issue.normalize(modelView.Issue.X1);
+                modelView.Issue.Y1 = modelView.Issue.normalize(modelView.Issue.Y1);
+                modelView.Issue.X2 = modelView.Issue.normalize(modelView.Issue.X2);
+                modelView.Issue.Y2 = modelView.Issue.normalize(modelView.Issue.Y2);
                 if (await _context.EditIssue(modelView.Issue) == null)
                     return BadRequest();
                 return RedirectToAction(nameof(Index));
